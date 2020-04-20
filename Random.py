@@ -1,5 +1,7 @@
 import requests
-pokemon_number = input("What is the Pokemon's ID? ")
+import random
+random_integer = random.randint(1, 151)
+pokemon_number = random_integer
 url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(pokemon_number)
 response = requests.get(url)
 pokemon = response.json()
