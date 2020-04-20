@@ -9,9 +9,13 @@ speed = stat_dic[int('0')]
 hp = stat_dic[int('5')]
 print("Player Pokemon")
 print(p_pokemon['name'])
+print("Height:")
 print(p_pokemon['height'])
+print("Weight:")
 print(p_pokemon['weight'])
+print("Speed:")
 print(speed['base_stat'])
+print("Heath:")
 print(hp['base_stat'])
 
 computer_pokemon = random.randint(1, 151)
@@ -25,7 +29,4 @@ hp = stat_dic[int('5')]
 print(" ")
 print("Computer Pokemon")
 print(c_pokemon['name'])
-print(c_pokemon['height'])
-print(c_pokemon['weight'])
-print(speed['base_stat'])
-print(hp['base_stat'])
+
