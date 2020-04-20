@@ -1,10 +1,20 @@
 import requests
 import random
-random_integer = random.randint(1, 151)
-pokemon_number = random_integer
-url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(pokemon_number)
+player_pokemon = random.randint(1, 151)
+url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(player_pokemon)
 response = requests.get(url)
 pokemon = response.json()
+print("Player Pokemon")
+print(pokemon['name'])
+print(pokemon['height'])
+print(pokemon['weight'])
+
+computer_pokemon = random.randint(1, 151)
+url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(computer_pokemon)
+response = requests.get(url)
+pokemon = response.json()
+print(" ")
+print("Computer Pokemon")
 print(pokemon['name'])
 print(pokemon['height'])
 print(pokemon['weight'])
