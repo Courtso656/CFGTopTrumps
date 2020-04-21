@@ -10,16 +10,20 @@ if format == "Single Round":
     stat_dic = p_pokemon['stats']
     speed = stat_dic[int('0')]
     hp = stat_dic[int('5')]
+    self_speed = speed['base_stat']
+    self_hp = hp['base_stat']
+    self_weight = p_pokemon['weight']
+    self_height = p_pokemon['height']
     print("Player Pokemon")
     print(p_pokemon['name'])
     print("Height:")
-    print(p_pokemon['height'])
+    print(self_height)
     print("Weight:")
-    print(p_pokemon['weight'])
+    print(self_weight)
     print("Speed:")
-    print(speed['base_stat'])
+    print(self_speed)
     print("Heath:")
-    print(hp['base_stat'])
+    print(self_hp)
 
     computer_pokemon = random.randint(1, 151)
     url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(computer_pokemon)
@@ -29,7 +33,52 @@ if format == "Single Round":
     stat_dic = c_pokemon['stats']
     speed = stat_dic[int('0')]
     hp = stat_dic[int('5')]
+    other_speed = speed['base_stat']
+    other_hp = hp['base_stat']
+    other_weight = c_pokemon['weight']
+    other_height = c_pokemon['height']
     print(" ")
     print("Computer Pokemon")
     print(c_pokemon['name'])
+
+    stat=input("Select Stat" )
+    if stat == "hp":
+        if self_hp >= other_hp:
+            print (self_hp)
+            print(other_hp)
+            print("Its super effective")
+        else:
+            print (self_hp)
+            print(other_hp)
+            print("Your pokemon fainted")
+    elif stat == "speed":
+        if self_speed >= other_speed:
+            print(self_speed)
+            print(other_speed)
+            print("Its super effective")
+        else:
+            print(self_speed)
+            print(other_speed)
+            print("Your pokemon fainted")
+    elif stat == "weight":
+        if self_weight >= other_weight:
+            print(self_weight)
+            print(other_weight)
+            print("Its super effective")
+        else:
+            print(self_weight)
+            print(other_weight)
+            print("Your pokemon fainted")
+    elif stat == "height":
+        print(self_height)
+        print(other_height)
+        if self_height >= other_height:
+            print("Its super effective")
+        else:
+            print(self_height)
+            print(other_height)
+            print("Your pokemon fainted")
+    else:
+        print("Error")
+
 
