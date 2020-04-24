@@ -1,11 +1,14 @@
 import requests
 import random
 print("Welcome to Top Dex!")
+print( )
+print("Game types:")
 print(" -Single Round")
-print(" -Multiple Rounds")
 print(" -Build a Team")
+print( )
+print ("Extras:")
 print(" -Info")
-format = input("Which game type?" )
+format = input("Which game type would you like?" )
 if format == "Single Round":
     print("Loading new game")
     restart = "yes"
@@ -251,3 +254,8 @@ elif format == "Build a Team":
             print(final_score)
     else:
         print("Thank you playing")
+elif format== "Info":
+elif format== "Theme Song"
+    from playsound import playsound
+    playsound()
+
