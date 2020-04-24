@@ -8,6 +8,7 @@ print(" -Build a Team")
 print( )
 print ("Extras:")
 print(" -Info")
+print(" -Theme Song")
 format = input("Which game type would you like?" )
 if format == "Single Round":
     print("Loading new game")
@@ -254,8 +255,7 @@ elif format == "Build a Team":
             print(final_score)
     else:
         print("Thank you playing")
-elif format== "Info":
-elif format== "Theme Song"
+elif format== "Theme Song":
     from playsound import playsound
-    playsound()
+    playsound('Original Pokemon Theme Singer Jason Paige In Studio Full Pokemon Theme Song.mp3')
 
