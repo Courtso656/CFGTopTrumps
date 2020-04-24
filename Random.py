@@ -144,9 +144,8 @@ elif format == "Build a Team":
         print(pokedex)
         print( )
         total_rounds = 0
-        rounds = 0
-        score = 0
-        while restart =="yes" and total_rounds <=6:
+        final_score = 0
+        while restart =="yes" and total_rounds < 6:
             pokemon_select = input("Select your pokemon (Slot 1-6)" )
             list_no= int(pokemon_select)-1
             player_pokemon1 = pokenumber[list_no]
@@ -189,39 +188,42 @@ elif format == "Build a Team":
             stat=input("Select Stat" )
             if stat == "hp":
                 if self_hp >= other_hp:
-                    total_rounds= rounds+1
+                    total_rounds=total_rounds+1
+                    final_score=final_score+1
                     print (self_hp)
                     print(other_hp)
                     print("Its super effective")
                     restart = input("Next Round?" )
                 else:
-                    total_rounds = rounds + 1
+                    total_rounds = total_rounds + 1
                     print (self_hp)
                     print(other_hp)
                     print("Your pokemon fainted")
                     restart = input("Next Round?" )
             elif stat == "speed":
                 if self_speed >= other_speed:
-                    total_rounds = rounds + 1
+                    total_rounds=total_rounds+1
+                    final_score=final_score+1
                     print(self_speed)
                     print(other_speed)
                     print("Its super effective")
                     restart = input("Next Round?")
                 else:
-                    total_rounds = rounds + 1
+                    total_rounds=total_rounds+1
                     print(self_speed)
                     print(other_speed)
                     print("Your pokemon fainted")
                     restart = input("Next Round?")
             elif stat == "weight":
                 if self_weight >= other_weight:
-                    total_rounds = rounds + 1
+                    total_rounds = total_rounds + 1
+                    final_score=final_score+ 1
                     print(self_weight)
                     print(other_weight)
                     print("Its super effective")
                     restart = input("Next Round?")
                 else:
-                    total_rounds = rounds + 1
+                    total_rounds = total_rounds + 1
                     print(self_weight)
                     print(other_weight)
                     print("Your pokemon fainted")
@@ -229,13 +231,14 @@ elif format == "Build a Team":
             elif stat == "height":
 
                 if self_height >= other_height:
-                    total_rounds = rounds + 1
+                    total_rounds = total_rounds + 1
+                    fianl_score=final_score+ 1
                     print(self_height)
                     print(other_height)
                     print("Its super effective")
                     restart = input("Next Round?")
                 else:
-                    total_rounds = rounds + 1
+                    total_rounds = total_rounds + 1
                     print(self_height)
                     print(other_height)
                     print("Your pokemon fainted")
@@ -243,6 +246,8 @@ elif format == "Build a Team":
             else:
                 print("Error")
         else:
+            restart ="no"
+            print ("Here's your final score!")
             print(final_score)
     else:
         print("Thank you playing")
