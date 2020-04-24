@@ -255,6 +255,13 @@ elif format == "Build a Team":
             print(final_score)
     else:
         print("Thank you playing")
+elif format == "Info":
+    print("Welcome to Kanto")
+    print("This app was made as part of the Code First Girls Beginners Python course by Courtney & Grace (Team 403) :)")
+    print("This is a verison of top trumps made using the pokemon API available at https://pokeapi.co/api/v2/pokemon/{}/")
+    print("Prepare for Trouble...")
+
+
 elif format== "Theme Song":
     from playsound import playsound
     playsound('Original Pokemon Theme Singer Jason Paige In Studio Full Pokemon Theme Song.mp3')
